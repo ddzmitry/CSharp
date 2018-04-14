@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -27,10 +28,16 @@ namespace Events
             //EncodeED event 
             encoder.VideoEncoded += mailService.OnVideoEncoded;
             encoder.VideoEncoded += messageService.OnVideoEncoded;
-
+            encoder.VideoEncoded += Dorefactor;
             encoder.Encode(video);
+
+
         }
 
+        public static void Dorefactor(object source ,VideoEventArgs e)
+        {
+            Console.WriteLine("Refactor is done and video {0} is ready",e.Video.Title);
+        }
         
 }
 

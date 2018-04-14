@@ -7,7 +7,7 @@ namespace Events
 
         public void OnVideoEncoded(object source, VideoEventArgs e)
         {
-            Console.WriteLine("Male servise is sending an email...about.{0}",e.Video.Title);
+            Console.WriteLine("Mail servise tells {0} is done incoding is sending an email...", e.Video.Title);
         }
     }
 }
