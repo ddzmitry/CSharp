@@ -25,6 +25,16 @@ namespace Dynamics
             Console.WriteLine(name);
 
 
+            dynamic a = 10;
+            dynamic b = 5;
+            var c = a+b;
+            System.Console.WriteLine(c);
+
+            // Dynamic will cas as an integer
+            int i = 5;
+            dynamic d = i;
+            long l = d;
+
 
         }
     }
