@@ -6,10 +6,40 @@ using System.Threading.Tasks;
 
 namespace LINQ
 {
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public string Job { get; set; }
+    }
+
     class Program
     {
+       
         static void Main(string[] args)
         {
+            var people = new List<Person>()
+            {
+                new Person(){Name = "Anastasia",Job = "Developer"},
+                new Person(){Name = "Dzmitry",Job = "Developer"},
+                new Person(){Name = "Peter",Job = "Bookeeper"},
+                new Person(){Name = "Josh",Job = "Cook"},
+                new Person(){Name = "Aaron",Job = "Cook"},
+                new Person(){Name = "Anastasia",Job = "Server"},
+            };
+
+            var anastasias = from p in people
+                where p.Job == "Developer"
+                             select p;
+            foreach (var anastasia in anastasias)
+            {
+                Console.WriteLine(anastasia.Job);
+                Console.WriteLine(anastasia.Name);
+
+            }
+
+
+
             var books = new BookRepository().GetBooks();
 
 
