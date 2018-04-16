@@ -31,11 +31,12 @@ namespace ButtonAsync
 
         private async  void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            //DownloadHtmlAsync("https://www.ganjawars.ru/index.php?frontpage");
+            MessageBox.Show("Poop");
+            DownloadHtmlAsync("https://www.ganjawars.ru/index.php?frontpage");
 
 
             var html =  await GetHtmlAsync("http://msdn.microsoft.com");
-                MessageBox.Show(html.Substring(0,10));
+                MessageBox.Show(html.Substring(0,50));
         }
 
 

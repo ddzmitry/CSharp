@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerationOperatorsLinqTutorial", "GenerationOperatorsLinqTutorial\GenerationOperatorsLinqTutorial.csproj", "{87D38584-B81D-4EE1-93A3-B1FD35A18979}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87D38584-B81D-4EE1-93A3-B1FD35A18979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D38584-B81D-4EE1-93A3-B1FD35A18979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D38584-B81D-4EE1-93A3-B1FD35A18979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D38584-B81D-4EE1-93A3-B1FD35A18979}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52786CA4-E586-4F9B-9DD8-FB82CB4EF10F}
+	EndGlobalSection
+EndGlobal
