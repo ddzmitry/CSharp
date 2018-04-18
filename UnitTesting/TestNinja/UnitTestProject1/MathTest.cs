@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using Math = TestNinja.Fundamentals.Math;
@@ -42,8 +43,18 @@ namespace UnitTestProject1
         public void GetOddNumbers_WhenCalled_returnsListOfOddNumbers()
         {
             
-            var result = _math.GetOddNumbers(3);
-            Assert.That(result,Is.EqualTo(new List<int>() { 1, 3 }));
+            var result = _math.GetOddNumbers(5);
+            //Set it to enumerable so don't have to do ir every time when method was called
+            var enumerable = result as int[] ?? result.ToArray();
+            Assert.That(enumerable,Is.Not.Empty);
+            Assert.That(enumerable.Count(),Is.EqualTo(3));
+            //Another way twsating on array 
+            Assert.That(enumerable, Is.EqualTo(new [] {1,3,5}));
+            Assert.That(enumerable,Is.EqualTo(new List<int>() { 1, 3, 5 }));
+            // Make sure it is ordered
+            Assert.That(enumerable,Is.Ordered);
+            Assert.That(enumerable, Is.Unique);
+
 
 
         }
